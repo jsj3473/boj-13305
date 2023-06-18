@@ -1,0 +1,14 @@
+cityNum = int(input())
+roadLens = list(map(int, input().split()))
+oilPrice = list(map(int, input().split()))
+minPrice = oilPrice[0]
+sumOilPrice = minPrice * roadLens[0] 
+
+for idx in range(1,len(roadLens)):
+    if oilPrice[idx] < minPrice:
+        minPrice = oilPrice[idx]
+    sumOilPrice += minPrice * roadLens[idx]
+print(sumOilPrice)
+
+전 도시에서의 기름값보다 현재 방문한 도시의 기름값이 더 쌀때 기름을 넣어주면된다.
+minprice로 기름값을 관리해준다.
